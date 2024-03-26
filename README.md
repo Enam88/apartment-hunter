@@ -19,8 +19,11 @@ This project aims to predict house prices using machine learning techniques. It 
 
 ## Project Structure
 
-```markdown
-```
+Below is the directory structure for the "house-pricing-prediction" project. Notably, the `data/` directory contains both raw and processed datasets, critical for machine learning model training and evaluation.
+
+![Project Structure Overview](image_link_here)  <!-- Replace `image_link_here` with the actual URL of your image -->
+
+```plaintext
 house-pricing-prediction/
 │
 ├── data/                    # Dataset directory
@@ -43,8 +46,7 @@ house-pricing-prediction/
 ├── Dockerfile               # Dockerfile for building the container
 ├── requirements.txt         # Project dependencies
 └── README.md                # Project documentation
-```
-```
+
 ## Data Collection
 Detail the process of gathering data, including sources, collection methods, and any challenges encountered.
 
