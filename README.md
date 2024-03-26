@@ -19,6 +19,10 @@ This project aims to predict house prices using machine learning techniques. It 
 
 ## Project Structure
 
+
+
+```markdown
+```
 house-pricing-prediction/
 │
 ├── data/                    # Dataset directory
@@ -41,6 +45,19 @@ house-pricing-prediction/
 ├── Dockerfile               # Dockerfile for building the container
 ├── requirements.txt         # Project dependencies
 └── README.md                # Project documentation
+```
+
+```
+```
+
+
+
+
+
+
+
+
+
 
 
 
