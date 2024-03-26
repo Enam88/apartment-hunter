@@ -21,7 +21,7 @@ This project aims to predict house prices using machine learning techniques. It 
 
 Below is the directory structure for the "house-pricing-prediction" project. Notably, the `data/` directory contains both raw and processed datasets, critical for machine learning model training and evaluation.
 
-![Project Structure Overview](image_link_here)  <!-- Replace `image_link_here` with the actual URL of your image -->
+![Project Roadmap Overview](image_link_here)  <!-- Replace `image_link_here` with the actual URL of your image -->
 
 ```plaintext
 house-pricing-prediction/
