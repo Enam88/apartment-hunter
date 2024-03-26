@@ -19,8 +19,6 @@ This project aims to predict house prices using machine learning techniques. It 
 
 ## Project Structure
 
-
-
 ```markdown
 ```
 house-pricing-prediction/
@@ -46,21 +44,7 @@ house-pricing-prediction/
 ├── requirements.txt         # Project dependencies
 └── README.md                # Project documentation
 ```
-
 ```
-```
-
-
-
-
-
-
-
-
-
-
-
-
 ## Data Collection
 Detail the process of gathering data, including sources, collection methods, and any challenges encountered.
 
