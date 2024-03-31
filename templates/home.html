@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Apartment Hunters</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="apptitle"><span class="fancy">Apartment Hunters</span></h1>
+        <h3>Welcome to Apartment Hunters Website,</h3>
+        
+        <!-- Form for entering price range and superficy -->
+        <form action="#" method="GET">
+            <label for="superficy">Superficy:</label>
+            <br>
+            <br>
+            <div class="range">
+                <div class="range-slider">
+                  <span class="range-selected"></span>
+                </div>
+                <div class="range-input">
+                  <input type="range" class="min" min="0" max="10000" value="3000" step="100">
+                  <input type="range" class="max" min="0" max="10000" value="7000" step="100">
+                </div>
+                <br>
+                <div class="range-superficy">      
+                  <label for="min">Min</label>
+                  <input type="number" name="min" value="3000" readonly>    
+                  <label for="max">Max</label>
+                  <input type="number" name="max" value="7000" readonly>      
+                </div>
+            </div> 
+            <br>
+
+
+            <div class="form-group">
+                <label for="yearb">The year the house was initially built:</label>
+                <input type="text" class="form-control" id="yearb" name="yearb" placeholder="Enter the year the house was initially built">
+            </div>
+            
+
+
+            <div class="form-group">
+                <label for="no_bedrooms">Number of bedrooms:</label>
+                <input type="text" class="form-control" id="no_bedrooms" name="no_bedrooms" placeholder="Enter the number of bedrooms">
+            </div>
+
+
+            <div class="form-group">
+                <label for="no_bathrooms">Number of bathrooms:</label>
+                <input type="text" class="form-control" id="no_bathrooms" name="no_bathrooms" placeholder="Enter the number of bathrooms">
+            </div>
+
+
+            <div class="form-group">
+                <label for="zipcode">Zipcode:</label>
+                <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Enter the Zipcode">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+
+
+            <script>
+                let rangeMin = 100;
+                const range = document.querySelector(".range-selected");
+                const rangeInput = document.querySelectorAll(".range-input input");
+                const rangeSup = document.querySelectorAll(".range-superficy input");
+                rangeInput.forEach((input) => {
+                    input.addEventListener("input", (e) => {
+                        let minRange = parseInt(rangeInput[0].value);
+                        let maxRange = parseInt(rangeInput[1].value);
+                        if (maxRange - minRange < rangeMin) {     
+                        if (e.target.className === "min") {
+                            rangeInput[0].value = maxRange - rangeMin;        
+                        } else {
+                            rangeInput[1].value = minRange + rangeMin;        
+                        }
+                        } else {
+                        rangeSup[0].value = minRange;
+                        rangeSup[1].value = maxRange;
+                        range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
+                        range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
+                    }
+                });
+                });
+
+
+                rangeSup.forEach((input) => {
+                    input.addEventListener("input", (e) => {
+                        let minSup = rangeSup[0].value;
+                        let maxSup = rangeSup[1].value;
+                        if (maxSup - minSup >= rangeMin && maxSup <= rangeInput[1].max) {
+                        if (e.target.className === "min") {
+                            rangeInput[0].value = minSup;
+                            range.style.left = (minSup / rangeInput[0].max) * 100 + "%";
+                        } else {
+                            rangeInput[1].value = maxSup;
+                            range.style.right = 100 - (maxSup / rangeInput[1].max) * 100 + "%";
+                        }
+                        }
+                    });
+                    });
+            </script>
+
+
+        </form>
+    </div>
+</body>
+
+
+</html>
