@@ -70,7 +70,7 @@ container {
 
 .range-slider {
   height: 5px;
-  width: 10cm;
+  width: 25.5%;
   position: relative;
   background-color: #e1e9f6;
   border-radius: 2px;
@@ -82,6 +82,15 @@ container {
   position: absolute;
   border-radius: 5px;
   background-color: #1b53c0;
+}
+
+
+.range-superficy input{
+  width: 10%;
+}
+
+.form-group input{
+  width: 25%;
 }
 
 
@@ -119,7 +128,7 @@ container {
 
 .range-input {
   position: relative;
-  width: 10cm;
+  width: 25.5%;
 }
 .range-input input {
   position: absolute;
