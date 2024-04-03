@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <div style="text-align: center;">
+        <img src="static/images/logo-laplateforme.png" alt="laplateforme logo" width="210" height="50">
+    </div>
     <title>Apartment Hunters</title>
 </head>
 
@@ -12,11 +15,10 @@
     <div class="container mt-4">
         <h1 class="apptitle"><span class="fancy">Apartment Hunters</span></h1>
         <h3>Welcome to Apartment Hunters Website,</h3>
-        
         <!-- Form for entering price range and superficy -->
         <form action="#" method="GET">
             <label for="superficy"><h4>Superficy (sqft):</h4></label>
-            <div style="padding-top: 15px;" class="range">
+            <div style="padding-top: 10px;" class="range">
                 <div class="range-slider">
                   <span class="range-selected"></span>
                 </div>
@@ -33,28 +35,28 @@
                 </div>
             </div> 
 
-            <div style="padding-top: 15px;" class="form-group">
+            <div style="padding-top: 12px;" class="form-group">
                 <label for="yearb"><h4>The year the house was built:</h4></label>
                 <input type="number" min="1800" class="form-control" id="yearb" name="yearb" placeholder="Enter the year the house was initially built">
             </div>
             
 
-            <div style="padding-top: 15px;" class="form-group">
+            <div style="padding-top: 12px;" class="form-group">
                 <label for="no_bedrooms"><h4>Number of bedrooms:</h4></label>
                 <input type="number" min="0" class="form-control" id="no_bedrooms" name="no_bedrooms" placeholder="Enter the number of bedrooms">
             </div>
 
-            <div style="padding-top: 15px;" class="form-group">
+            <div style="padding-top: 12px;" class="form-group">
                 <label for="no_bathrooms"><h4>Number of bathrooms:</h4></label>
                 <input type="number" min="0" class="form-control" id="no_bathrooms" name="no_bathrooms" placeholder="Enter the number of bathrooms">
             </div>
 
-            <div style="padding-top: 15px;" class="form-group">
+            <div style="padding-top: 12px;" class="form-group">
                 <label for="zipcode"><h4>Zipcode:</h4></label>
                 <input type="number" min="0" class="form-control" id="zipcode" name="zipcode" placeholder="Enter the Zipcode">
             </div>
 
-            <div style="padding-top: 15px;" class="form-group">
+            <div style="padding-top: 12px;" class="form-group">
                 <button type="submit" class="btn btn-primary">Search</button>
             </div>
             
