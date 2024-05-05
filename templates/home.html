@@ -14,6 +14,7 @@
 <body>
     <div class="container mt-4">
         <h1 class="apptitle"><span class="fancy">Apartment Hunters</span></h1>
+<<<<<<< HEAD
         <div class="welcome-heading"><h3>Welcome to Apartment Hunters Website,</h3></div>
         <!-- Form for entering price range and superficy -->
         <div class="form-container">
@@ -26,11 +27,38 @@
             <div style="padding-top: 12px;" class="form-group">
                 <label for="yearb"><h4>The year the house was built:</h4></label>
                 <input type="number" min="1850" class="form-control" id="yearb" name="yearb" placeholder="Enter the year the house was initially built" required>
+=======
+        <h3>Welcome to Apartment Hunters Website,</h3>
+        <!-- Form for entering price range and superficy -->
+        <form action="#" method="GET">
+            <label for="superficy"><h4>Superficy (sqft):</h4></label>
+            <div style="padding-top: 10px;" class="range">
+                <div class="range-slider">
+                  <span class="range-selected"></span>
+                </div>
+                <div class="range-input">
+                  <input type="range" class="min" min="0" max="10000" value="3000" step="100">
+                  <input type="range" class="max" min="0" max="10000" value="7000" step="100">
+                </div>
+                <br>
+                <div class="range-superficy">      
+                  <label for="min">Min</label>
+                  <input type="number" name="min" value="3000" readonly>    
+                  <label for="max">Max</label>
+                  <input type="number" name="max" value="7000" readonly>      
+                </div>
+            </div> 
+
+            <div style="padding-top: 12px;" class="form-group">
+                <label for="yearb"><h4>The year the house was built:</h4></label>
+                <input type="number" min="1800" class="form-control" id="yearb" name="yearb" placeholder="Enter the year the house was initially built">
+>>>>>>> cdbe04cee4a3d772db0366655603abec2b245897
             </div>
             
 
             <div style="padding-top: 12px;" class="form-group">
                 <label for="no_bedrooms"><h4>Number of bedrooms:</h4></label>
+<<<<<<< HEAD
                 <input type="number" min="0" class="form-control" id="no_bedrooms" name="no_bedrooms" placeholder="Enter the number of bedrooms" required>
             </div>
 
@@ -62,6 +90,70 @@
 
 
         </form></div>
+=======
+                <input type="number" min="0" class="form-control" id="no_bedrooms" name="no_bedrooms" placeholder="Enter the number of bedrooms">
+            </div>
+
+            <div style="padding-top: 12px;" class="form-group">
+                <label for="no_bathrooms"><h4>Number of bathrooms:</h4></label>
+                <input type="number" min="0" class="form-control" id="no_bathrooms" name="no_bathrooms" placeholder="Enter the number of bathrooms">
+            </div>
+
+            <div style="padding-top: 12px;" class="form-group">
+                <label for="zipcode"><h4>Zipcode:</h4></label>
+                <input type="number" min="0" class="form-control" id="zipcode" name="zipcode" placeholder="Enter the Zipcode">
+            </div>
+
+            <div style="padding-top: 12px;" class="form-group">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+            
+
+            <script>
+                let rangeMin = 100;
+                const range = document.querySelector(".range-selected");
+                const rangeInput = document.querySelectorAll(".range-input input");
+                const rangeSup = document.querySelectorAll(".range-superficy input");
+                rangeInput.forEach((input) => {
+                    input.addEventListener("input", (e) => {
+                        let minRange = parseInt(rangeInput[0].value);
+                        let maxRange = parseInt(rangeInput[1].value);
+                        if (maxRange - minRange < rangeMin) {     
+                        if (e.target.className === "min") {
+                            rangeInput[0].value = maxRange - rangeMin;        
+                        } else {
+                            rangeInput[1].value = minRange + rangeMin;        
+                        }
+                        } else {
+                        rangeSup[0].value = minRange;
+                        rangeSup[1].value = maxRange;
+                        range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
+                        range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
+                    }
+                });
+                });
+
+
+                rangeSup.forEach((input) => {
+                    input.addEventListener("input", (e) => {
+                        let minSup = rangeSup[0].value;
+                        let maxSup = rangeSup[1].value;
+                        if (maxSup - minSup >= rangeMin && maxSup <= rangeInput[1].max) {
+                        if (e.target.className === "min") {
+                            rangeInput[0].value = minSup;
+                            range.style.left = (minSup / rangeInput[0].max) * 100 + "%";
+                        } else {
+                            rangeInput[1].value = maxSup;
+                            range.style.right = 100 - (maxSup / rangeInput[1].max) * 100 + "%";
+                        }
+                        }
+                    });
+                    });
+            </script>
+
+
+        </form>
+>>>>>>> cdbe04cee4a3d772db0366655603abec2b245897
     </div>
 </body>
 
