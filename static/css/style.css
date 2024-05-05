@@ -27,7 +27,6 @@ h1.apptitle{
   }
 }
 
-<<<<<<< HEAD
 .checkbox-inline {
     display: inline-block;
     margin-right: 20px; 
@@ -36,9 +35,6 @@ h1.apptitle{
 .welcome-heading {
   text-align: center;
 }
-=======
-
->>>>>>> cdbe04cee4a3d772db0366655603abec2b245897
 
 h3{
     font-family: 'Calibri', sans-serif;
@@ -104,11 +100,7 @@ container {
 }
 
 .form-group input{
-<<<<<<< HEAD
   width: 100%;
-=======
-  width: 25%;
->>>>>>> cdbe04cee4a3d772db0366655603abec2b245897
 }
 
 
